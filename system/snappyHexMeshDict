@@ -1,0 +1,227 @@
+FoamFile
+{
+    version         2;
+    format          ascii;
+    class           dictionary;
+    object          snappyHexMeshDict;
+}
+
+// Exported by SnappyHexMesh GUI add-on for Blender v1.0
+// Source file: /home/gagan/Documents/Unicopter.blend
+// Export date: 2022-05-27 13:08:29.899012
+
+castellatedMesh true;
+snap            true;
+addLayers       false;
+
+geometry
+{
+    AMI_one
+    {
+        type triSurfaceMesh;
+        file "AMI_one.obj";
+        // Min Bounds = [-1.23774e-01 -1.23774e-01  8.62914e-02]
+        // Max Bounds = [ 1.23774e-01  1.23774e-01  1.25813e-01]
+        // Area = 1.26328e-01
+    }
+    AMI_two
+    {
+        type triSurfaceMesh;
+        file "AMI_two.obj";
+        // Min Bounds = [-1.23774e-01 -1.23774e-01  7.01614e-02]
+        // Max Bounds = [ 1.23774e-01  1.23774e-01  8.54412e-02]
+        // Area = 1.07506e-01
+    }
+    Rotor_one
+    {
+        type triSurfaceMesh;
+        file "Rotor_one.obj";
+        // Min Bounds = [-9.92454e-02 -7.21942e-02  8.66953e-02]
+        // Max Bounds = [ 9.91434e-02  7.21642e-02  1.22647e-01]
+        // Area = 6.53032e-03
+    }
+    Rotor_two
+    {
+        type triSurfaceMesh;
+        file "Rotor_two.obj";
+        // Min Bounds = [-9.11758e-02 -6.34708e-02  7.14797e-02]
+        // Max Bounds = [ 9.11674e-02  6.34708e-02  8.46092e-02]
+        // Area = 5.10149e-03
+    }
+
+
+    domain
+    {
+        type triSurfaceMesh;
+        file "domain.obj";
+        // Min Bounds = [-2.38652e-02 -2.36379e-02 -1.65349e-01]
+        // Max Bounds = [ 2.36475e-02  2.36734e-02  6.99663e-02]
+        // Area = 1.12896e-01
+    }
+}
+
+castellatedMeshControls
+{
+    maxLocalCells   10000000;
+    maxGlobalCells  10000000;
+    minRefinementCells 10;
+    maxLoadUnbalance 0.1;
+    nCellsBetweenLevels 4;
+    locationInMesh (0.029815200716257095 0.0 0.1187782883644104);
+    allowFreeStandingZoneFaces true;
+    resolveFeatureAngle 30;
+    features
+    (
+        {
+            file "AMI_one.eMesh";
+            level 0;
+        }
+        {
+            file "AMI_two.eMesh";
+            level 0;
+        }
+        {
+            file "Rotor_one.eMesh";
+            level 6;
+        }
+        {
+            file "Rotor_two.eMesh";
+            level 6;
+        }
+
+        {
+            file "domain.eMesh";
+            level 0;
+        }
+
+    );
+    refinementSurfaces
+    {
+        AMI_one
+        {
+            level (4 4);
+            faceType    boundary;
+            cellZone    AMI_one;
+            faceZone    AMI_one;
+            cellZoneInside  inside;
+        }
+        AMI_two
+        {
+            level (4 4);
+            faceType    boundary;
+            cellZone    AMI_two;
+            faceZone    AMI_two;
+            cellZoneInside  inside;
+        }
+        Rotor_one
+        {
+            level (6 6);
+            patchInfo { type wall; }
+        }
+        Rotor_two
+        {
+            level (6 6);
+            patchInfo { type wall; }
+        }
+
+
+        domain
+        {
+            level (2 2);
+            patchInfo { type wall; }
+        }
+
+    }
+    refinementRegions
+    {
+       AMI_one
+        {
+               mode        inside;
+               levels      ((1E15 4));
+        }
+
+        AMI_two
+            {
+                   mode        inside;
+                   levels      ((1E15 4));
+            }
+    }
+}
+
+snapControls
+{
+    nSmoothPatch    5;
+    tolerance       1;
+    nSolveIter      500;
+    nRelaxIter      10;
+    nFeatureSnapIter 10;
+    //implicitFeatureSnap false;
+    //explicitFeatureSnap true;
+    //multiRegionFeatureSnap true;
+}
+
+addLayersControls
+{
+    relativeSizes   true;
+    expansionRatio  1;
+    finalLayerThickness 0.3;
+    minThickness    0.1;
+    nGrow           0;
+    featureAngle    60;
+    slipFeatureAngle 30;
+    nRelaxIter      3;
+    nSmoothSurfaceNormals 1;
+    nSmoothNormals  3;
+    nSmoothThickness 10;
+    maxFaceThicknessRatio 0.5;
+    maxThicknessToMedialRatio 0.3;
+    minMedianAxisAngle 90;
+    nBufferCellsNoExtrude 0;
+    nLayerIter      50;
+    layers
+    {
+        AMI_one
+        {
+             nSurfaceLayers 0;
+        }
+        AMI_two
+        {
+             nSurfaceLayers 0;
+        }
+        Rotor_one
+        {
+             nSurfaceLayers 0;
+        }
+        Rotor_two
+        {
+             nSurfaceLayers 0;
+        }
+        Unicopter
+        {
+             nSurfaceLayers 0;
+        }
+
+    }
+}
+
+meshQualityControls
+{
+    maxNonOrtho     65;
+    maxBoundarySkewness 20;
+    maxInternalSkewness 4;
+    maxConcave      80;
+    minVol          1e-15;
+    minTetQuality   1e-15;
+    minArea         -1;
+    minTwist        0.02;
+    minDeterminant  0.001;
+    minFaceWeight   0.05;
+    minVolRatio     0.01;
+    minTriangleTwist -1;
+    nSmoothScale    4;
+    errorReduction  0.75;
+}
+
+writeFlags      ( scalarLevels layerSets layerFields );
+
+mergeTolerance  1e-06;
