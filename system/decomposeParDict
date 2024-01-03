@@ -1,3 +1,10 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  plus                                  |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
 FoamFile
 {
     version     2.0;
@@ -6,29 +13,11 @@ FoamFile
     object      decomposeParDict;
 }
 
-// Exported by SnappyHexMesh GUI add-on for Blender v1.0
-// Source file: /home/gagan/Documents/Unicopter.blend
-// Export date: 2022-05-27 13:08:30.930187
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-numberOfSubdomains 4;
+numberOfSubdomains  2;
 
 method          scotch;
-// method          simple;
 
-simpleCoeffs
-{
-    n               (1 1 4);
-    delta           0.001;
-}
 
-hierarchicalCoeffs
-{
-    n               (1 1 4);
-    delta           0.001;
-    order           xyz;
-}
-
-manualCoeffs
-{
-    dataFile        "cellDecomposition";
-}
+// ************************************************************************* //

@@ -1,8 +1,8 @@
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  v2112                                 |
-|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|  \\    /   O peration     | Version:  plus                                  |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
 FoamFile
@@ -16,32 +16,34 @@ FoamFile
 
 ddtSchemes
 {
-    default         Euler;
+    default         CrankNicolson 0.9;
 }
 
 gradSchemes
 {
     default         Gauss linear;
-    grad(p)         Gauss linear;
-    grad(U)         cellLimited Gauss linear 1;
 }
 
 divSchemes
 {
     default         none;
-
-    div(phi,U)      Gauss linearUpwind grad(U);
-
-    turbulence      Gauss upwind;
-    div(phi,k)      $turbulence;
-    div(phi,epsilon) $turbulence;
-
-    div((nuEff*dev2(T(grad(U))))) Gauss linear;
+    div(phi,U)      Gauss limitedLinearV 1;
+    div(phi,k)      Gauss limitedLinear 1;
+    div(phi,epsilon) Gauss upwind;
+    div(phi,R)      Gauss limitedLinear 1;
+    div(R)          Gauss limitedLinear 1;
+    div(phi,omega)  Gauss limitedLinear 1;
+    div(phid,p)     Gauss limitedLinear 1;
+    div(phi,K)      Gauss upwind;
+    div(phi,e)      Gauss upwind;
+    div(((rho*nuEff)*dev2(T(grad(U))))) Gauss linear;
+    div((nuEff*dev2(T(grad(U)))))   Gauss linear;
 }
 
 laplacianSchemes
 {
-    default         Gauss linear limited corrected 0.33;
+    default         Gauss linear corrected;
+	laplacian(yPsi) Gauss linear corrected;
 }
 
 interpolationSchemes
@@ -51,8 +53,27 @@ interpolationSchemes
 
 snGradSchemes
 {
-    default         limited corrected 0.33;
+    default         corrected;
 }
+
+oversetInterpolation
+{
+    method          cellVolumeWeight; //inverseDistance;
+}
+
+//wallDist
+//{
+//    method Poisson;
+//}
+
+fluxRequired
+{
+    default         no;
+    pcorr           ;
+    p               ;
+}
+
+
 
 
 // ************************************************************************* //

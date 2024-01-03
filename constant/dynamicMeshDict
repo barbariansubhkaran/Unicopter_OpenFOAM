@@ -1,8 +1,8 @@
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  v2112                                 |
-|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|  \\    /   O peration     | Version:  v1812                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
 FoamFile
@@ -14,29 +14,38 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dynamicFvMesh   dynamicMotionSolverFvMesh;
+dynamicFvMesh       dynamicOversetFvMesh;
 
-motionSolverLibs (fvMotionSolvers);
+motionSolver        multiSolidBodyMotionSolver;
 
-motionSolver    solidBody;
 
-cellZone        AMI_one;
 
-solidBodyMotionFunction  rotatingMotion;
+domain1{
+	solidBodyMotionFunction rotatingMotion;
+	
+	cellZone			domain1;
 
-origin      (0 0 0.095342);
-axis        (0 0 1);
-omega       261.8; // rad/s
+	rotatingMotionCoeffs
+	{
+		origin      (-0.060 0 0);
+		axis        (1 0 0);
+		omega       -3100;
+	}
+}
 
-motionSolver    solidBody;
+domain2{
+	solidBodyMotionFunction rotatingMotion;
 
-cellZone        AMI_two;
+	cellZone			domain2;
+	
 
-solidBodyMotionFunction  rotatingMotion;
-
-origin      (0 0 0.077449);
-axis        (0 0 1);
-omega       -261.8; // rad/s
+	rotatingMotionCoeffs
+	{
+		origin      (0 0 0);
+		axis        (1 0 0);
+		omega       3100;
+	}
+}
 
 
 

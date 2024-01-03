@@ -1,0 +1,86 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2106                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _c15bfde3cb-20210624 OPENFOAM=2106
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceFeatureExtract
+Date   : Dec 31 2023
+Time   : 13:57:28
+Host   : gagan-Z97P-D3
+PID    : 46853
+I/O    : uncollated
+Case   : /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+Note: Feature line extraction only valid on closed manifold surfaces
+
+Reading surfaceFeatureExtractDict
+
+Surfaces     : PropCW.stl
+Output       : PropCW
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 12192 in 1 region(s)
+Vertices     : 6269
+Bounding Box : (-0.0687655 -0.0289811 -0.00349777) (-0.060158 0.0289981 0.00349299)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial Feature set:
+    points : 6
+    edges  : 1498
+    of which
+        region edges   : 340
+        external edges : 830
+        internal edges : 328
+
+Final Feature set:
+    points : 1496
+    of which
+        convex             : 0
+        concave            : 0
+        mixed              : 6
+        non-feature        : 1490
+    edges  : 1498
+    of which
+        external edges     : 830
+        internal edges     : 328
+        flat edges         : 0
+        open edges         : 340
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/constant/extendedFeatureEdgeMesh/PropCW.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/constant/extendedFeatureEdgeMesh/PropCW"
+Writing 0 convex feature points to "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/constant/extendedFeatureEdgeMesh/PropCW_convexFeaturePts.obj"
+Writing 0 concave feature points to "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/constant/extendedFeatureEdgeMesh/PropCW_concaveFeaturePts.obj"
+Writing 6 mixed feature points to "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/constant/extendedFeatureEdgeMesh/PropCW_mixedFeaturePts.obj"
+Writing 6 mixed feature point structure to "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/constant/extendedFeatureEdgeMesh/PropCW_mixedFeaturePtsStructure.obj"
+Writing 830 external edges to "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/constant/extendedFeatureEdgeMesh/PropCW_externalEdges.obj"
+Writing 328 internal edges to "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/constant/extendedFeatureEdgeMesh/PropCW_internalEdges.obj"
+Writing 0 flat edges to "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/constant/extendedFeatureEdgeMesh/PropCW_flatEdges.obj"
+Writing 340 open edges to "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/constant/extendedFeatureEdgeMesh/PropCW_openEdges.obj"
+Writing 0 multiple edges to "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/constant/extendedFeatureEdgeMesh/PropCW_multipleEdges.obj"
+Writing 340 region edges to "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/constant/extendedFeatureEdgeMesh/PropCW_regionEdges.obj"
+Writing 1498 edge directions to "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/constant/extendedFeatureEdgeMesh/PropCW_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/constant/triSurface/PropCW.eMesh"
+ExecutionTime = 0.03 s  ClockTime = 1 s
+
+End
+

@@ -1,0 +1,160 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2106                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _c15bfde3cb-20210624 OPENFOAM=2106
+Arch   : "LSB;label=32;scalar=64"
+Exec   : blockMesh
+Date   : Dec 31 2023
+Time   : 13:57:07
+Host   : gagan-Z97P-D3
+PID    : 45481
+I/O    : uncollated
+Case   : /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from "system/blockMeshDict"
+Using #calc at line 28 in file "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/system/blockMeshDict"
+Using #codeStream with "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_f5e4bd271b0c65a6d9a4ec9159e91a28bcc8a79e.so"
+Could not load "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_f5e4bd271b0c65a6d9a4ec9159e91a28bcc8a79e.so"
+/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_f5e4bd271b0c65a6d9a4ec9159e91a28bcc8a79e.so: cannot open shared object file: No such file or directory
+Creating new library in "dynamicCode/_f5e4bd271b0c65a6d9a4ec9159e91a28bcc8a79e/platforms/linux64GccDPInt32Opt/lib/libcodeStream_f5e4bd271b0c65a6d9a4ec9159e91a28bcc8a79e.so"
+Invoking wmake libso /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_f5e4bd271b0c65a6d9a4ec9159e91a28bcc8a79e
+wmake libso /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_f5e4bd271b0c65a6d9a4ec9159e91a28bcc8a79e
+    ln: ./lnInclude
+    dep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_f5e4bd271b0c65a6d9a4ec9159e91a28bcc8a79e/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_f5e4bd271b0c65a6d9a4ec9159e91a28bcc8a79e.so
+Using #calc at line 29 in file "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/system/blockMeshDict"
+Using #codeStream with "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_61cdd7eb332239535f0c82ba0d9e83f595e276fd.so"
+Could not load "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_61cdd7eb332239535f0c82ba0d9e83f595e276fd.so"
+/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_61cdd7eb332239535f0c82ba0d9e83f595e276fd.so: cannot open shared object file: No such file or directory
+Creating new library in "dynamicCode/_61cdd7eb332239535f0c82ba0d9e83f595e276fd/platforms/linux64GccDPInt32Opt/lib/libcodeStream_61cdd7eb332239535f0c82ba0d9e83f595e276fd.so"
+Invoking wmake libso /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_61cdd7eb332239535f0c82ba0d9e83f595e276fd
+wmake libso /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_61cdd7eb332239535f0c82ba0d9e83f595e276fd
+    ln: ./lnInclude
+    dep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_61cdd7eb332239535f0c82ba0d9e83f595e276fd/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_61cdd7eb332239535f0c82ba0d9e83f595e276fd.so
+Using #calc at line 30 in file "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/system/blockMeshDict"
+Using #codeStream with "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3821880f5a627558483ccb1caad3b3f747504c02.so"
+Could not load "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3821880f5a627558483ccb1caad3b3f747504c02.so"
+/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3821880f5a627558483ccb1caad3b3f747504c02.so: cannot open shared object file: No such file or directory
+Creating new library in "dynamicCode/_3821880f5a627558483ccb1caad3b3f747504c02/platforms/linux64GccDPInt32Opt/lib/libcodeStream_3821880f5a627558483ccb1caad3b3f747504c02.so"
+Invoking wmake libso /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_3821880f5a627558483ccb1caad3b3f747504c02
+wmake libso /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_3821880f5a627558483ccb1caad3b3f747504c02
+    ln: ./lnInclude
+    dep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_3821880f5a627558483ccb1caad3b3f747504c02/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_3821880f5a627558483ccb1caad3b3f747504c02.so
+Using #calc at line 31 in file "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/system/blockMeshDict"
+Using #codeStream with "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_e4eb37f651e2f8aff37835a14fdf0ef685833a1a.so"
+Could not load "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_e4eb37f651e2f8aff37835a14fdf0ef685833a1a.so"
+/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_e4eb37f651e2f8aff37835a14fdf0ef685833a1a.so: cannot open shared object file: No such file or directory
+Creating new library in "dynamicCode/_e4eb37f651e2f8aff37835a14fdf0ef685833a1a/platforms/linux64GccDPInt32Opt/lib/libcodeStream_e4eb37f651e2f8aff37835a14fdf0ef685833a1a.so"
+Invoking wmake libso /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_e4eb37f651e2f8aff37835a14fdf0ef685833a1a
+wmake libso /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_e4eb37f651e2f8aff37835a14fdf0ef685833a1a
+    ln: ./lnInclude
+    dep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_e4eb37f651e2f8aff37835a14fdf0ef685833a1a/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_e4eb37f651e2f8aff37835a14fdf0ef685833a1a.so
+Using #calc at line 32 in file "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/system/blockMeshDict"
+Using #codeStream with "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_8970bcc98d06b54875e61f552180068f82632c1b.so"
+Could not load "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_8970bcc98d06b54875e61f552180068f82632c1b.so"
+/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_8970bcc98d06b54875e61f552180068f82632c1b.so: cannot open shared object file: No such file or directory
+Creating new library in "dynamicCode/_8970bcc98d06b54875e61f552180068f82632c1b/platforms/linux64GccDPInt32Opt/lib/libcodeStream_8970bcc98d06b54875e61f552180068f82632c1b.so"
+Invoking wmake libso /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_8970bcc98d06b54875e61f552180068f82632c1b
+wmake libso /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_8970bcc98d06b54875e61f552180068f82632c1b
+    ln: ./lnInclude
+    dep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_8970bcc98d06b54875e61f552180068f82632c1b/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_8970bcc98d06b54875e61f552180068f82632c1b.so
+Using #calc at line 33 in file "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/system/blockMeshDict"
+Using #codeStream with "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_750f8a3b557dd38937d2295a82f0727954b99e6d.so"
+Could not load "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_750f8a3b557dd38937d2295a82f0727954b99e6d.so"
+/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_750f8a3b557dd38937d2295a82f0727954b99e6d.so: cannot open shared object file: No such file or directory
+Creating new library in "dynamicCode/_750f8a3b557dd38937d2295a82f0727954b99e6d/platforms/linux64GccDPInt32Opt/lib/libcodeStream_750f8a3b557dd38937d2295a82f0727954b99e6d.so"
+Invoking wmake libso /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_750f8a3b557dd38937d2295a82f0727954b99e6d
+wmake libso /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_750f8a3b557dd38937d2295a82f0727954b99e6d
+    ln: ./lnInclude
+    dep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_750f8a3b557dd38937d2295a82f0727954b99e6d/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_750f8a3b557dd38937d2295a82f0727954b99e6d.so
+Using #calc at line 36 in file "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/system/blockMeshDict"
+Using #codeStream with "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_b510c05e35f1ebd4a6c6ab7dce94a318cbacdc8d.so"
+Could not load "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_b510c05e35f1ebd4a6c6ab7dce94a318cbacdc8d.so"
+/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_b510c05e35f1ebd4a6c6ab7dce94a318cbacdc8d.so: cannot open shared object file: No such file or directory
+Creating new library in "dynamicCode/_b510c05e35f1ebd4a6c6ab7dce94a318cbacdc8d/platforms/linux64GccDPInt32Opt/lib/libcodeStream_b510c05e35f1ebd4a6c6ab7dce94a318cbacdc8d.so"
+Invoking wmake libso /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_b510c05e35f1ebd4a6c6ab7dce94a318cbacdc8d
+wmake libso /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_b510c05e35f1ebd4a6c6ab7dce94a318cbacdc8d
+    ln: ./lnInclude
+    dep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_b510c05e35f1ebd4a6c6ab7dce94a318cbacdc8d/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_b510c05e35f1ebd4a6c6ab7dce94a318cbacdc8d.so
+Using #calc at line 37 in file "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/system/blockMeshDict"
+Using #codeStream with "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_f5aa3c13fc29b5087727fcec1ad5dc4c9d0f6502.so"
+Could not load "/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_f5aa3c13fc29b5087727fcec1ad5dc4c9d0f6502.so"
+/mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_f5aa3c13fc29b5087727fcec1ad5dc4c9d0f6502.so: cannot open shared object file: No such file or directory
+Creating new library in "dynamicCode/_f5aa3c13fc29b5087727fcec1ad5dc4c9d0f6502/platforms/linux64GccDPInt32Opt/lib/libcodeStream_f5aa3c13fc29b5087727fcec1ad5dc4c9d0f6502.so"
+Invoking wmake libso /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_f5aa3c13fc29b5087727fcec1ad5dc4c9d0f6502
+wmake libso /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_f5aa3c13fc29b5087727fcec1ad5dc4c9d0f6502
+    ln: ./lnInclude
+    dep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /mnt/156ef307-e85d-45af-b0ab-57748c0af3f2/contra_props_60mm_template/PropellerMesh_CW/dynamicCode/_f5aa3c13fc29b5087727fcec1ad5dc4c9d0f6502/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_f5aa3c13fc29b5087727fcec1ad5dc4c9d0f6502.so
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list (topological search)...
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 1
+    Block 0 cell size :
+        i : 0.004 .. 0.004
+        j : 0.004 .. 0.004
+        k : 0.004 .. 0.004
+
+
+There are no merge patch pairs
+
+Writing polyMesh with 0 cellZones
+----------------
+Mesh Information
+----------------
+  boundingBox: (-0.08 -0.04 -0.02) (-0.04 0.04 0.02)
+  nPoints: 2541
+  nCells: 2000
+  nFaces: 6500
+  nInternalFaces: 5500
+----------------
+Patches
+----------------
+  patch 0 (start: 5500 size: 1000) name: domain
+
+End
+

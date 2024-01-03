@@ -1,8 +1,8 @@
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  v2112                                 |
-|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|  \\    /   O peration     | Version:  v1812                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
 FoamFile
@@ -14,9 +14,11 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
+#include        "include/initialConditions"
+
 dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform 0;
+internalField   uniform $pressure;
 
 boundaryField
 {
@@ -30,29 +32,36 @@ boundaryField
     outlet
     {
         type            fixedValue;
-        value           uniform 0;
+        value           $internalField;
     }
 
-    domain
+    sides
+    {
+        type            slip;
+    }
+	/*
+	"plane_zone(0|1|2)"
+    {
+        type            zeroGradient;
+    }*/
+    propellerCW
     {
         type            zeroGradient;
     }
-
-    Rotor_one
+	propellerCCW
     {
-      type            zeroGradient;
+        type            zeroGradient;
     }
-
-    Rotor_two
+	domain
     {
-      type            zeroGradient;
+        type            overset;
+		value			uniform 0;
     }
-
-    Unicopter
+	domain_PropellerMesh_CCW
     {
-      type            zeroGradient;
+        type            overset;
+		value			uniform 0;
     }
 }
-
 
 // ************************************************************************* //
